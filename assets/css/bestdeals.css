@@ -1,0 +1,81 @@
+h1{
+     color: green;
+ }
+.container {
+     display: block;
+  
+ }
+.magnifier{
+     position: fixed;
+     left: 40%;
+     top: 60px;
+     width: 500px;
+     height: 500px;
+}
+.mtr{
+    margin-left: 55px;
+    
+}
+ .active{
+     border-bottom: 3px solid green;
+}
+#magMian{
+     
+    width:300px;
+
+}
+
+
+@media only screen and (max-width:1025px) {
+    .MagnifierImage{
+        width: 100%;
+     }
+    .magnifier{
+        display: none;
+    }
+    #magMian{
+     
+         width:300px;
+     
+    }
+ 
+    .mtr {
+        justify-content: start;
+        margin-left: 130px;
+    }
+ 
+    #hi {
+        width:40%;
+    }
+ 
+}
+@media only screen and (max-width:769px) {
+
+    #magMian{
+     
+         width:300px;
+     
+    }
+    #hi {
+        width:40%;
+    }
+    .magnifier{
+        display: none;
+    }
+ 
+}
+@media only screen and (max-width:426px) {
+    .mtr{
+           
+            margin-left: 0px;
+            bottom: 0%;
+        }
+    #hi {
+        width: 30%;
+    }
+    #magMian{
+     
+        width: 300px;
+    
+   }
+}

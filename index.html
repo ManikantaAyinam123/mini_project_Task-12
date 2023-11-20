@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="./assets/css/index.css" rel="stylesheet" >
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="data.json"></script>
+    <script src="./assets/js/index.js"></script>
+
+</head>
+<body onload="data()">
+ 
+     <!--nav start-->
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container-fluid">
+      <img src="./assets/images/HomePage_Img/logo.png" alt="logo" width="80px" height="50px" >
+      <form class="d-flex mt-1 overlay">
+        <label for="tags"></label>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="tags">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+              <a class="nav-link fw-bold text-light active " href="./index.html">Home</a>
+              <a class="nav-link fw-bold text-light  " href="./catagories.html">Categories</a>
+              <a class="nav-link fw-bold text-light" href="./bestdeals.html">Best Deals</a>
+              <a class="nav-link fw-bold text-light" href="./account.html" aria-disabled="true">Account</a>
+          </div>
+      </div>
+  </div>
+</nav>
+<!--carousel-->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/images/HomePage_Img/carousel1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item ">
+            <img src="./assets/images/HomePage_Img/carosel2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/HomePage_Img/carousel3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+    </div>
+<!--home content-->
+      <div class="container mt-5">
+      <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2  g-4 " id="cards-container">
+        <!-- <div class="col ">
+          <div class="card  border-0">
+            <img src="https://www.reliancedigital.in/medias/Hp-6N043PA-ACJ-Laptop-493177597-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyOTkyOHxpbWFnZS9qcGVnfGltYWdlcy9oNjIvaDZhLzk4ODIyODk1MzcwNTQuanBnfDAzZjY0ZjBmY2RmNWY0YzBiMWU5MGQ1YTkxYWIxMmVhZGJmYTdkNDFkYWRiMGMwNzNhOTlhNzFmM2EzNWQxZGE" class="card-img-top" alt="...">
+            <button type="button" class="btn btn-primary">
+              Best Deals On Laptops
+              <i class="fa fa-external-link ms-2"></i>
+         
+            </button>
+            </div>
+        </div>
+        <div class="col">
+          <div class="card  border-0">
+            <img src="https://www.reliancedigital.in/medias/HP-Laptops-493838071-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2NzczOHxpbWFnZS9qcGVnfGltYWdlcy9oMjEvaDZhLzEwMDE4Mzc3MDA3MTM0LmpwZ3wzNmZhMjM4YWZjZTJmZGUxMDU4N2YwNzNmNzk4OThhNmI4YTA2NDJmMGMyYWUxZGViMTkzYzk2MzA1YmQzNTZm" class="card-img-top" alt="...">
+            <button type="button" class="btn btn-primary">
+              Best Deals On Laptops
+              <i class="fa fa-external-link ms-2"></i>
+            
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card  border-0">
+            <img src="https://www.reliancedigital.in/medias/Lenovo-183L8PAACJ-Laptops-491997394-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w5NzEzOXxpbWFnZS9qcGVnfGltYWdlcy9oMjUvaDZiLzk2MTYxODcwNjQzNTAuanBnfDE2NjhhNjc5MzVkNTI1NDFmOWY0YWY3MTY1NWFiNGZlY2FkOWE4OWFhMGE5YjZlMmFlNjkyNjYxZDIxOWYyNjI" class="card-img-top" alt="...">
+            <button type="button" class="btn btn-primary">
+              Best Deals On Gaming Laptops
+              <i class="fa fa-external-link ms-2"></i>
+           
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card  border-0">
+            <img src="https://www.reliancedigital.in/medias/HP-15s-Eq2212AU-Laptop-493666175-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxNzA0MXxpbWFnZS9qcGVnfGltYWdlcy9oOWUvaGU4Lzk5ODUwODIzOTI2MDYuanBnfDIwNjBkNmFlZDFmMWFlOGE5MGE2NmFhY2Y0ZjEyOThhM2ViZDIwZjY4NmM2M2FkOTg2MjRkZTc0YWM2NWIwYzQ" class="card-img-top" alt="...">
+            <button type="button" class="btn btn-primary">
+              Best Deals On Laptops
+              <i class="fa fa-external-link ms-2"></i>
+             
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card  border-0">
+            <img src="https://www.reliancedigital.in/medias/HP-Laptops-493838071-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2NzczOHxpbWFnZS9qcGVnfGltYWdlcy9oMjEvaDZhLzEwMDE4Mzc3MDA3MTM0LmpwZ3wzNmZhMjM4YWZjZTJmZGUxMDU4N2YwNzNmNzk4OThhNmI4YTA2NDJmMGMyYWUxZGViMTkzYzk2MzA1YmQzNTZm" class="card-img-top" alt="...">
+            <button type="button" class="btn btn-primary">
+              Best Deals On Laptops
+              <i class="fa fa-external-link ms-2"></i>
+             
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card  border-0">
+            <img src="https://www.reliancedigital.in/medias/Hp-14-DY0212TU-Laptop-493178396-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyODg5NXxpbWFnZS9qcGVnfGltYWdlcy9oM2EvaGZhLzk5MDUyNzE1Mzc2OTQuanBnfDU0YmM3Y2RjNGYyMzc5MTIyM2M5NzQzZWM1MmI2NzdlMzlkODY2ZjcxZjBhNjk4ZWFiYTVkYTQ1NDU4OTFiNTY" class="card-img-top" alt="...">
+            <button type="button" class="btn btn-primary">
+              Best Deals On Laptops
+              <i class="fa fa-external-link ms-2"></i>
+             
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card  border-0">
+            <img src="https://www.reliancedigital.in/medias/HP-15s-Eq2212AU-Laptop-493666175-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxNzA0MXxpbWFnZS9qcGVnfGltYWdlcy9oOWUvaGU4Lzk5ODUwODIzOTI2MDYuanBnfDIwNjBkNmFlZDFmMWFlOGE5MGE2NmFhY2Y0ZjEyOThhM2ViZDIwZjY4NmM2M2FkOTg2MjRkZTc0YWM2NWIwYzQ" class="card-img-top" alt="...">
+            <button type="button" class="btn btn-primary">
+              Best Deals On Laptops
+              <i class="fa fa-external-link ms-2"></i>
+             
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card  border-0">
+            <img src="https://www.reliancedigital.in/medias/HP-15s-Eq2212AU-Laptop-493666175-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxNzA0MXxpbWFnZS9qcGVnfGltYWdlcy9oOWUvaGU4Lzk5ODUwODIzOTI2MDYuanBnfDIwNjBkNmFlZDFmMWFlOGE5MGE2NmFhY2Y0ZjEyOThhM2ViZDIwZjY4NmM2M2FkOTg2MjRkZTc0YWM2NWIwYzQ" class="card-img-top" alt="...">
+            <button type="button" class="btn btn-primary">
+              Best Deals On Laptops
+              <i class="fa fa-external-link ms-2"></i>
+            
+            </button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+<!--footer starting-->
+<footer class=" py-4 bg-dark mt-5" id="Contact Us">
+  <div class="container-fluid ">
+       <div class="row ">
+         <div class="col-lg-4 col-md-6">
+          <img src="./assets/images/HomePage_Img/logo.png" alt="logo" width="80px" height="50px"> 
+           <p class="small  mb-0 text-light">&copy; Copyrights. All rights reserved.</p>
+         </div>
+         <div class="col-lg-2 col-md-6 mt-3">
+           <h5 class="mb-3 text-warning">Follow Us</h5>
+               <a href="https://www.instagram.com/accounts/onetap/?next=%2F&hl=en"target="_blank" ><i style="color: rgb(199, 199, 212)" class="fa fa-linkedin"></i></a>
+               <a href="https://www.linkedin.com/in/manikanta-ayinam-5244aa228/"target="_blank">
+               <i style="color: red" class="fa fa-instagram"></i></a>
+               <a><i style="color: skyblue" class="fa fa-facebook-f"></i></a>
+               <i style="color: rgb(40, 209, 40)" class="fa fa-whatsapp"></i>
+          </div>
+          <div class="col-lg-2 col-md-6 ">
+           <h5 class=" mb-3 text-warning mt-3">Quick links</h5>
+           <ul class="list-unstyled">
+           <li><a href="#" class="text-white text-decoration-none h6 mb-4">Home</a></li>
+           <li><a href="#" class="text-white text-decoration-none h6 mb-4">About Us</a></li>
+           <li><a href="#" class="text-white text-decoration-none h6 mb-4">Categories</a></li>
+           <li><a href="#" class="text-white text-decoration-none h6 mb-4">Contact Us</a></li>
+           </ul>
+         </div>
+         <div class="col-lg-3 col-md-6">
+           <h5 class="text-warning mb-3 mt-md-3">Newsletter</h5>
+           <p class="small text-white">Subscribe to our Newsletter and Receive our latest designs</p>
+           <form action="#">
+             <div class="input-group mb-3">
+            <input class="form-control bg-light"type="text"placeholder="ENTER YOUR E-MAIL"aria-label="Recipient's username"aria-describedby="button-addon2" />
+             <div class="input-group-addon bg-warning fs-5">
+              <i class="fa fa-paper-plane " aria-hidden="true"></i> <span class="me-1">Send</span>
+            </div>
+           </div>
+         </form>
+       </div>
+       <div class="col-lg-1 col-md-1 d-flex justify-content-end ms-md-auto fixed">
+       <a href="#"><i class="fa fa-arrow-circle-up fs-1 mt-4 me-3 text-warning" aria-hidden="true"></i></a>
+       </div>
+      </form>
+    </div>
+     </div>
+   </div>
+</footer>
+<!--footer ending-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

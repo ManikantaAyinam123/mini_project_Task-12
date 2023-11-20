@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <!-- <link
+ href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/> -->
+ 
+<!--jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+<link href="./assets/css/account.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+  
+<!--nav start-->
+    <nav class="navbar navbar-expand-lg bg-dark text-dark">
+      <div class="container-fluid">
+          <img src="./assets/images/HomePage_Img/logo.png" alt="logo" width="80px" height="50px">
+          <button class="navbar-toggler bg-light " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                  <a class="nav-link fw-bold text-light " href="./index.html">Home</a>
+                  <a class="nav-link fw-bold text-light  " href="./catagories.html">Categories</a>
+                  <a class="nav-link fw-bold text-light " href="./bestdeals.html">Best Deals</a>
+                  <a class="nav-link fw-bold text-light active" href="./account.html" aria-disabled="true">Account</a>
+              </div>
+          </div>
+      </div>
+    </nav>
+    <!--nav end-->
+
+  <!--form start-->
+   <div class="container ">
+      <div class="container p-5 bg-light mt-5 mb-5">
+        <div class="h2 d-flex justify-content-center text-dark">
+          Contact Form
+        </div>
+        <!--name-->
+        <div class="mb-3">
+          <label for="Name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="tname" />
+          <div id="nameHelp" class="form-text text-danger"><p></p></div>
+        </div>
+        <!--lastname-->
+        <div class="mb-3">
+          <label for="Name" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lname" />
+          <div id="lnameHelp" class="form-text text-danger"><p></p></div>
+        </div>
+        <!--email-->
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text text-danger"><p></p></div>
+        </div>
+  
+        <!--phonenumber-->
+        <div class="mb-3">
+          <label for="phonenumber" class="form-label">Phone Number</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phonenumber"
+            placeholder="Accepting Only Indian Numbers(+91)"
+          />
+          <div id="phoneNumberHelp" class="form-text text-danger"><p></p></div>
+        </div>
+      <!--star-->
+        <div class="mb-5 row ">
+          <div class="col-sm-6 ">
+              <label>Plese Rate</label>
+              <div class="star-rating">
+              <div class="star-input">
+                      <input type="radio" name="rating" id="rating-5">
+                      <label for="rating-5" class="fas fa-star"></label>
+                      <input type="radio" name="rating" id="rating-4">
+                      <label for="rating-4" class="fas fa-star"></label>
+                      <input type="radio" name="rating" id="rating-3">
+                      <label for="rating-3" class="fas fa-star"></label>
+                     <input type="radio" name="rating" id="rating-2">
+                      <label for="rating-2" class="fas fa-star"></label>
+                     <input type="radio" name="rating" id="rating-1">
+                      <label for="rating-1" class="fas fa-star"></label>
+          </div>
+         </div>
+      </div>
+     </div>
+      <div class="mb-5">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+      </div>
+        <!--Button-->
+        <button type="button" class="btn btn-primary" id="submit" onclick="account()">Submit</button>
+      </div>
+      <!--modalform-->
+      <div class="modal " id="successModal">
+        <div class="modal-dialog">
+          <div class="modal-content border border-5-success">
+            <div class="modal-header d-flex flex-column align-items-center">
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              <i class="fa fa-check-circle text-center" style="font-size:50px;color:green"></i><br>
+              <h5 id="nu" class="text-success"></h5>
+            </div>
+          
+           
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+
+
+
+<!--model ending-->
+      </div>
+<!--footer starting-->
+<footer class=" py-4 bg-dark" id="Contact Us">
+  <div class="container-fluid ">
+       <div class="row ">
+         <div class="col-lg-4 col-md-6">
+          <img src="./assets/images/HomePage_Img/logo.png" alt="logo" width="80px" height="50px"> 
+           <p class="small  mb-0 text-white">&copy; Copyrights. All rights reserved.</p>
+         </div>
+         <div class="col-lg-2 col-md-6 mt-3">
+           <h5 class="mb-3 text-white">Follow Us</h5>
+               <a href="https://www.instagram.com/accounts/onetap/?next=%2F&hl=en"target="_blank" ><i style="color: rgb(199, 199, 212)" class="fa fa-linkedin"></i></a>
+               <a href="https://www.linkedin.com/in/manikanta-ayinam-5244aa228/"target="_blank">
+               <i style="color: red" class="fa fa-instagram"></i></a>
+               <a><i style="color: skyblue" class="fa fa-facebook-f"></i></a>
+               <i style="color: rgb(40, 209, 40)" class="fa fa-whatsapp"></i>
+          </div>
+          <div class="col-lg-2 col-md-6 ">
+           <h5 class=" mb-3 text-white   mt-3">Quick links</h5>
+           <ul class="list-unstyled">
+           <li><a href="#" class="text-white  text-decoration-none h6 mb-4">Home</a></li>
+           <li><a href="#" class="text-white  text-decoration-none h6 mb-4">About Us</a></li>
+           <li><a href="#" class="text-white  text-decoration-none h6 mb-4">Categories</a></li>
+           <li><a href="#" class="text-white  text-decoration-none h6 mb-4">Contact Us</a></li>
+           </ul>
+         </div>
+         <div class="col-lg-3 col-md-6">
+           <h5 class="text-white mb-3 mt-md-3">Newsletter</h5>
+           <p class="small text-white ">Subscribe to our Newsletter and Receive our latest designs</p>
+           <form action="#">
+             <div class="input-group mb-3">
+            <input class="form-control bg-light"type="text"placeholder="ENTER YOUR E-MAIL"aria-label="Recipient's username"aria-describedby="button-addon2" />
+             <div class="input-group-addon bg-warning fs-5">
+              <i class="fa fa-paper-plane " aria-hidden="true"></i> <span class="me-1">Send</span>
+            </div>
+           </div>
+         </form>
+       </div>
+       <div class="col-lg-1 col-md-1 d-flex justify-content-end ms-md-auto fixed">
+       <a href="#"><i class="fa fa-arrow-circle-up fs-1 mt-4 me-3 text-success" aria-hidden="true"></i></a>
+       </div>
+      </form>
+    </div>
+     </div>
+   </div>
+</footer>
+<!--footer ending-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+<script src="./assets/js/account.js"></script>
+</body>
+</html>
